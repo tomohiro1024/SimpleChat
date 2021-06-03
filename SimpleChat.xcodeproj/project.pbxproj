@@ -13,6 +13,8 @@
 		CD571453266910D1005DD8C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD571451266910D1005DD8C5 /* Main.storyboard */; };
 		CD571455266910D4005DD8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD571454266910D4005DD8C5 /* Assets.xcassets */; };
 		CD571458266910D4005DD8C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD571456266910D4005DD8C5 /* LaunchScreen.storyboard */; };
+		CD57146026691184005DD8C5 /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD57145F26691184005DD8C5 /* ChatList.storyboard */; };
+		CD57146226691309005DD8C5 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57146126691309005DD8C5 /* ChatListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CD571454266910D4005DD8C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD571457266910D4005DD8C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD571459266910D4005DD8C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD57145F26691184005DD8C5 /* ChatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
+		CD57146126691309005DD8C5 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				CD57144B266910D1005DD8C5 /* AppDelegate.swift */,
 				CD57144D266910D1005DD8C5 /* SceneDelegate.swift */,
+				CD57145F26691184005DD8C5 /* ChatList.storyboard */,
 				CD57144F266910D1005DD8C5 /* ViewController.swift */,
 				CD571451266910D1005DD8C5 /* Main.storyboard */,
 				CD571454266910D4005DD8C5 /* Assets.xcassets */,
 				CD571456266910D4005DD8C5 /* LaunchScreen.storyboard */,
 				CD571459266910D4005DD8C5 /* Info.plist */,
+				CD57146126691309005DD8C5 /* ChatListViewController.swift */,
 			);
 			path = SimpleChat;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			files = (
 				CD571458266910D4005DD8C5 /* LaunchScreen.storyboard in Resources */,
 				CD571455266910D4005DD8C5 /* Assets.xcassets in Resources */,
+				CD57146026691184005DD8C5 /* ChatList.storyboard in Resources */,
 				CD571453266910D1005DD8C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				CD571450266910D1005DD8C5 /* ViewController.swift in Sources */,
 				CD57144C266910D1005DD8C5 /* AppDelegate.swift in Sources */,
+				CD57146226691309005DD8C5 /* ChatListViewController.swift in Sources */,
 				CD57144E266910D1005DD8C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomohiro.SimpleChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomohiro.SimpleChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
