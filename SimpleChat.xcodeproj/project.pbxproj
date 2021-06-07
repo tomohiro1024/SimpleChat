@@ -62,13 +62,13 @@
 			children = (
 				CD57144B266910D1005DD8C5 /* AppDelegate.swift */,
 				CD57144D266910D1005DD8C5 /* SceneDelegate.swift */,
+				CD57146126691309005DD8C5 /* ChatListViewController.swift */,
 				CD57145F26691184005DD8C5 /* ChatList.storyboard */,
 				CD57144F266910D1005DD8C5 /* ViewController.swift */,
 				CD571451266910D1005DD8C5 /* Main.storyboard */,
 				CD571454266910D4005DD8C5 /* Assets.xcassets */,
 				CD571456266910D4005DD8C5 /* LaunchScreen.storyboard */,
 				CD571459266910D4005DD8C5 /* Info.plist */,
-				CD57146126691309005DD8C5 /* ChatListViewController.swift */,
 			);
 			path = SimpleChat;
 			sourceTree = "<group>";
