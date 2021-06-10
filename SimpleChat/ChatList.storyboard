@@ -37,7 +37,7 @@
                                 <color key="backgroundColor" red="1" green="0.19103776659999999" blue="0.94137009559999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.19103776659999999" blue="0.94137009559999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="dAs-Tx-Ugt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="dAs-Tx-Ugt" customClass="ChatListTableViewCell" customModule="SimpleChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dAs-Tx-Ugt" id="XBp-1s-05V">
@@ -51,12 +51,42 @@
                                                         <constraint firstAttribute="width" secondItem="8BT-BM-Yy5" secondAttribute="height" multiplier="1:1" id="mdy-9A-7L2"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最後のメッセージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzo-6D-QVy">
+                                                    <rect key="frame" x="110" y="21" width="114.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb0-Vq-bET">
+                                                    <rect key="frame" x="110" y="46" width="29" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwH-Wf-NTb">
+                                                    <rect key="frame" x="348.5" y="31" width="35.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Qb0-Vq-bET" firstAttribute="leading" secondItem="8BT-BM-Yy5" secondAttribute="trailing" constant="10" id="5WY-Ir-kEs"/>
                                                 <constraint firstItem="8BT-BM-Yy5" firstAttribute="leading" secondItem="XBp-1s-05V" secondAttribute="leadingMargin" constant="10" id="8RZ-c2-CUQ"/>
+                                                <constraint firstItem="Dzo-6D-QVy" firstAttribute="top" secondItem="XBp-1s-05V" secondAttribute="topMargin" constant="10" id="LAM-a1-d56"/>
+                                                <constraint firstItem="JwH-Wf-NTb" firstAttribute="top" secondItem="XBp-1s-05V" secondAttribute="topMargin" constant="20" id="MKU-jk-TA8"/>
                                                 <constraint firstItem="8BT-BM-Yy5" firstAttribute="centerY" secondItem="XBp-1s-05V" secondAttribute="centerY" id="Nuv-f5-X6h"/>
+                                                <constraint firstItem="Dzo-6D-QVy" firstAttribute="leading" secondItem="8BT-BM-Yy5" secondAttribute="trailing" constant="10" id="aba-or-Xp4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JwH-Wf-NTb" secondAttribute="trailing" constant="10" id="lks-tI-fk2"/>
+                                                <constraint firstItem="Qb0-Vq-bET" firstAttribute="top" secondItem="Dzo-6D-QVy" secondAttribute="bottom" constant="8" id="pkS-MH-uG8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="JwH-Wf-NTb" id="Tdb-d5-b9L"/>
+                                            <outlet property="latestMesseageLabel" destination="Dzo-6D-QVy" id="mb1-5J-lvT"/>
+                                            <outlet property="partnerLabel" destination="Qb0-Vq-bET" id="zec-FR-6Dh"/>
+                                            <outlet property="userImageView" destination="8BT-BM-Yy5" id="zMv-Xv-swg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -71,6 +101,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o1P-VI-WMU"/>
+                    <connections>
+                        <outlet property="chatListTableView" destination="5mp-A6-8be" id="mOz-N0-KY5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
