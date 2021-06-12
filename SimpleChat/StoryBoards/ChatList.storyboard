@@ -44,9 +44,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8BT-BM-Yy5">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kein" translatesAutoresizingMaskIntoConstraints="NO" id="8BT-BM-Yy5">
                                                     <rect key="frame" x="30" y="5" width="70" height="70"/>
-                                                    <color key="backgroundColor" red="1" green="0.05765299384" blue="0.33753695659999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="ORL-SH-fLE"/>
                                                         <constraint firstAttribute="width" secondItem="8BT-BM-Yy5" secondAttribute="height" multiplier="1:1" id="mdy-9A-7L2"/>
@@ -64,8 +64,8 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwH-Wf-NTb">
-                                                    <rect key="frame" x="348.5" y="31" width="35.5" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwH-Wf-NTb">
+                                                    <rect key="frame" x="347" y="31" width="37" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -112,6 +112,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="kein" width="132.5" height="95"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
