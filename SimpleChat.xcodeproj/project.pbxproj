@@ -14,6 +14,8 @@
 		CD57146026691184005DD8C5 /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD57145F26691184005DD8C5 /* ChatList.storyboard */; };
 		CD57146226691309005DD8C5 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57146126691309005DD8C5 /* ChatListViewController.swift */; };
 		CD571466267466B7005DD8C5 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD571465267466B7005DD8C5 /* UIColor-Extension.swift */; };
+		CD95D6562675F4CA001C41ED /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD95D6552675F4CA001C41ED /* ChatRoomTableViewCell.xib */; };
+		CD95D6582675F639001C41ED /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95D6572675F639001C41ED /* ChatRoomTableViewCell.swift */; };
 		CD9B5A5E26746B2B00780E83 /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9B5A5D26746B2B00780E83 /* ChatRoom.storyboard */; };
 		CD9B5A6026746C9B00780E83 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		CD57145F26691184005DD8C5 /* ChatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
 		CD57146126691309005DD8C5 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		CD571465267466B7005DD8C5 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		CD95D6552675F4CA001C41ED /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
+		CD95D6572675F639001C41ED /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		CD9B5A5D26746B2B00780E83 /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
 		CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +68,8 @@
 			children = (
 				CD571464267465F5005DD8C5 /* StoryBoards */,
 				CD571463267465B9005DD8C5 /* Controllers */,
+				CD95D6552675F4CA001C41ED /* ChatRoomTableViewCell.xib */,
+				CD95D6572675F639001C41ED /* ChatRoomTableViewCell.swift */,
 				CD571465267466B7005DD8C5 /* UIColor-Extension.swift */,
 				CD57144B266910D1005DD8C5 /* AppDelegate.swift */,
 				CD57144D266910D1005DD8C5 /* SceneDelegate.swift */,
@@ -149,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD95D6562675F4CA001C41ED /* ChatRoomTableViewCell.xib in Resources */,
 				CD571458266910D4005DD8C5 /* LaunchScreen.storyboard in Resources */,
 				CD571455266910D4005DD8C5 /* Assets.xcassets in Resources */,
 				CD57146026691184005DD8C5 /* ChatList.storyboard in Resources */,
@@ -167,6 +174,7 @@
 				CD571466267466B7005DD8C5 /* UIColor-Extension.swift in Sources */,
 				CD9B5A6026746C9B00780E83 /* ChatRoomViewController.swift in Sources */,
 				CD57146226691309005DD8C5 /* ChatListViewController.swift in Sources */,
+				CD95D6582675F639001C41ED /* ChatRoomTableViewCell.swift in Sources */,
 				CD57144E266910D1005DD8C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
