@@ -17,6 +17,7 @@
 		CD95D6562675F4CA001C41ED /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD95D6552675F4CA001C41ED /* ChatRoomTableViewCell.xib */; };
 		CD95D6582675F639001C41ED /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95D6572675F639001C41ED /* ChatRoomTableViewCell.swift */; };
 		CD95D65D2677941F001C41ED /* ChatInputAccesoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD95D65C2677941F001C41ED /* ChatInputAccesoryView.xib */; };
+		CD95D65F26780A8C001C41ED /* ChatInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95D65E26780A8C001C41ED /* ChatInputAccesoryView.swift */; };
 		CD9B5A5E26746B2B00780E83 /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9B5A5D26746B2B00780E83 /* ChatRoom.storyboard */; };
 		CD9B5A6026746C9B00780E83 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		CD95D6552675F4CA001C41ED /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 		CD95D6572675F639001C41ED /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		CD95D65C2677941F001C41ED /* ChatInputAccesoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputAccesoryView.xib; sourceTree = "<group>"; };
+		CD95D65E26780A8C001C41ED /* ChatInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccesoryView.swift; sourceTree = "<group>"; };
 		CD9B5A5D26746B2B00780E83 /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
 		CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				CD95D65B2677939F001C41ED /* Extensions */,
-				CD95D65A26779384001C41ED /* Cells */,
+				CD95D65A26779384001C41ED /* Views */,
 				CD95D65926779361001C41ED /* Xibs */,
 				CD571464267465F5005DD8C5 /* StoryBoards */,
 				CD571463267465B9005DD8C5 /* Controllers */,
@@ -109,12 +111,13 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
-		CD95D65A26779384001C41ED /* Cells */ = {
+		CD95D65A26779384001C41ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CD95D6572675F639001C41ED /* ChatRoomTableViewCell.swift */,
+				CD95D65E26780A8C001C41ED /* ChatInputAccesoryView.swift */,
 			);
-			path = Cells;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CD95D65B2677939F001C41ED /* Extensions */ = {
@@ -203,6 +206,7 @@
 				CD9B5A6026746C9B00780E83 /* ChatRoomViewController.swift in Sources */,
 				CD57146226691309005DD8C5 /* ChatListViewController.swift in Sources */,
 				CD95D6582675F639001C41ED /* ChatRoomTableViewCell.swift in Sources */,
+				CD95D65F26780A8C001C41ED /* ChatInputAccesoryView.swift in Sources */,
 				CD57144E266910D1005DD8C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
