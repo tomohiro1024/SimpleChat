@@ -9,6 +9,10 @@ import UIKit
 
 class ChatInputAccesoryView: UIView {
     
+    @IBOutlet weak var chatTextView: UITextView!
+    
+    @IBOutlet weak var sendButton: UIButton!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
