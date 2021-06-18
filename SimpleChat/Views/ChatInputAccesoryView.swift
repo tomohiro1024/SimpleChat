@@ -17,6 +17,7 @@ class ChatInputAccesoryView: UIView {
         
         nibInit()
         setupViews()
+        autoresizingMask = .flexibleHeight
     }
     
     private func setupViews() {
@@ -30,6 +31,10 @@ class ChatInputAccesoryView: UIView {
         sendButton.contentVerticalAlignment = .fill
         sendButton.isEnabled = false
         
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return .zero
     }
     
     private func nibInit() {
