@@ -7,10 +7,22 @@
 
 import UIKit
 
+protocol ChatInputAccesoryViewDelegate: class {
+    func tappedSendButton(text: String)
+}
+
 class ChatInputAccesoryView: UIView {
     
     @IBOutlet weak var chatTextView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
+    
+    @IBAction func tappedSendButton(_ sender: Any) {
+        guard let text = chatTextView.text else { return }
+        delegate?.tappedSendButton(text: text)
+        print("tapped SendButton")
+    }
+    
+    weak var delegate: ChatInputAccesoryViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,6 +42,9 @@ class ChatInputAccesoryView: UIView {
         sendButton.contentHorizontalAlignment = .fill
         sendButton.contentVerticalAlignment = .fill
         sendButton.isEnabled = false
+        
+        chatTextView.text = ""
+        chatTextView.delegate = self
         
     }
     
@@ -51,4 +66,16 @@ class ChatInputAccesoryView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+extension ChatInputAccesoryView: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        print("textView.text: ", textView.text)
+        if textView.text.isEmpty {
+            sendButton.isEnabled = false
+        } else {
+            sendButton.isEnabled = true
+        }
+    }
 }
