@@ -13,9 +13,10 @@ class ChatRoomViewController: UIViewController {
     
     @IBOutlet weak var chatRoomTableView: UITableView!
     
-    private var chatInputAccesoryView: ChatInputAccesoryView = {
+    private lazy var chatInputAccesoryView: ChatInputAccesoryView = {
         let view = ChatInputAccesoryView()
         view.frame = .init(x: 0, y: 0, width: view.frame.width, height: 100)
+        view.delegate = self
         return view
     }()
     
@@ -38,8 +39,13 @@ class ChatRoomViewController: UIViewController {
         return true
     }
     
+}
+
+extension ChatRoomViewController: ChatInputAccesoryViewDelegate {
     
-    
+    func tappedSendButton(text: String) {
+        print("text: ", text)
+    }
     
 }
 
