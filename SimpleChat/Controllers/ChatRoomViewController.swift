@@ -10,6 +10,7 @@ import UIKit
 class ChatRoomViewController: UIViewController {
     
     private let cellId = "cellId"
+    private var messages = [String]()
     
     @IBOutlet weak var chatRoomTableView: UITableView!
     
@@ -44,6 +45,9 @@ class ChatRoomViewController: UIViewController {
 extension ChatRoomViewController: ChatInputAccesoryViewDelegate {
     
     func tappedSendButton(text: String) {
+        messages.append(text)
+        chatInputAccesoryView.chatTextView.text = ""
+        chatRoomTableView.reloadData()
         print("text: ", text)
     }
     
@@ -57,7 +61,7 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

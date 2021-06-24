@@ -48,6 +48,10 @@ class ChatInputAccesoryView: UIView {
         
     }
     
+    func removeText() {
+        
+    }
+    
     override var intrinsicContentSize: CGSize {
         return .zero
     }
