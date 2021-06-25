@@ -49,7 +49,8 @@ class ChatInputAccesoryView: UIView {
     }
     
     func removeText() {
-        
+        chatTextView.text = ""
+        sendButton.isEnabled = false
     }
     
     override var intrinsicContentSize: CGSize {

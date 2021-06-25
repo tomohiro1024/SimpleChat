@@ -46,9 +46,8 @@ extension ChatRoomViewController: ChatInputAccesoryViewDelegate {
     
     func tappedSendButton(text: String) {
         messages.append(text)
-        chatInputAccesoryView.chatTextView.text = ""
+        chatInputAccesoryView.removeText()
         chatRoomTableView.reloadData()
-        print("text: ", text)
     }
     
 }
@@ -65,8 +64,8 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = chatRoomTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
+        let cell = chatRoomTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ChatRoomTableViewCell
+        cell.messageTextView.text = messages[indexPath.row]
         return cell
     }
     
