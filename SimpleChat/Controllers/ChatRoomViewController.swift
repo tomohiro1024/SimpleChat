@@ -65,7 +65,8 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatRoomTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ChatRoomTableViewCell
-        cell.messageTextView.text = messages[indexPath.row]
+//        cell.messageTextView.text = messages[indexPath.row]
+        cell.messageText = messages[indexPath.row]
         return cell
     }
     

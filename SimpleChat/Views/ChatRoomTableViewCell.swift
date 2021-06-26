@@ -9,9 +9,23 @@ import UIKit
 
 class ChatRoomTableViewCell: UITableViewCell {
     
+    var messageText: String? {
+        didSet {
+            guard let text = messageText else { return }
+            let width = estimateFrameForTextView(text: text).width + 20
+            
+            messageTextViewWidthConstraint.constant = width
+            messageTextView.text = text
+        }
+        
+    }
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var messageTextViewWidthConstraint: NSLayoutConstraint!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
