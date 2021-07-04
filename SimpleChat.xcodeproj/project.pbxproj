@@ -10,6 +10,7 @@
 		3DD401D52BBEB203351C0ECB /* Pods_SimpleChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659E8272B710AE2657086373 /* Pods_SimpleChat.framework */; };
 		CD0E3F63269157970033C4F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0E3F62269157970033C4F6 /* GoogleService-Info.plist */; };
 		CD0E3F6526915C000033C4F6 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0E3F6426915C000033C4F6 /* SignUp.storyboard */; };
+		CD0E3F67269162C70033C4F6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E3F66269162C70033C4F6 /* SignUpViewController.swift */; };
 		CD57144C266910D1005DD8C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57144B266910D1005DD8C5 /* AppDelegate.swift */; };
 		CD57144E266910D1005DD8C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57144D266910D1005DD8C5 /* SceneDelegate.swift */; };
 		CD571455266910D4005DD8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD571454266910D4005DD8C5 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		659E8272B710AE2657086373 /* Pods_SimpleChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0E3F62269157970033C4F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD0E3F6426915C000033C4F6 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		CD0E3F66269162C70033C4F6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CD571448266910D1005DD8C5 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD57144B266910D1005DD8C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD57144D266910D1005DD8C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				CD57146126691309005DD8C5 /* ChatListViewController.swift */,
 				CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */,
+				CD0E3F66269162C70033C4F6 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				CD57144C266910D1005DD8C5 /* AppDelegate.swift in Sources */,
 				CD571466267466B7005DD8C5 /* UIColor-Extension.swift in Sources */,
+				CD0E3F67269162C70033C4F6 /* SignUpViewController.swift in Sources */,
 				CD9B5A6026746C9B00780E83 /* ChatRoomViewController.swift in Sources */,
 				CD57146226691309005DD8C5 /* ChatListViewController.swift in Sources */,
 				CD95D6582675F639001C41ED /* ChatRoomTableViewCell.swift in Sources */,
