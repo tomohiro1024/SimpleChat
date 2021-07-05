@@ -38,5 +38,20 @@ class SignUpViewController: UIViewController {
     }
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editImage = info[.editedImage] as? UIImage {
+            profileImageButton.setImage(editImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            profileImageButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+        
+        profileImageButton.setTitle("", for: .normal)
+        profileImageButton.imageView?.contentMode = .scaleAspectFill
+        profileImageButton.contentHorizontalAlignment = .fill
+        profileImageButton.contentVerticalAlignment = .fill
+        profileImageButton.clipsToBounds = true
+        
+        dismiss(animated: true, completion: nil)
+    }
     
 }
