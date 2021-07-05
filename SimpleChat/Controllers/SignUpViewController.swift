@@ -16,8 +16,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var alreadyHaveAccountButton: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +24,19 @@ class SignUpViewController: UIViewController {
         profileImageButton.layer.borderColor = UIColor.rgb(red: 240, green: 240, blue: 240).cgColor
         
         registerButton.layer.cornerRadius = 12
+        
+        profileImageButton.addTarget(self, action: #selector(tappedProfileImageButton), for: .touchUpInside)
     }
+    
+    @objc private func tappedProfileImageButton() {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = true
+            
+            self.present(imagePickerController, animated: true, completion: nil)
+        }
+    }
+
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 }
