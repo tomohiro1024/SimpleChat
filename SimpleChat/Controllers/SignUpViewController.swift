@@ -26,6 +26,14 @@ class SignUpViewController: UIViewController {
         registerButton.layer.cornerRadius = 12
         
         profileImageButton.addTarget(self, action: #selector(tappedProfileImageButton), for: .touchUpInside)
+//        registerButton.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        usernameTextField.delegate = self
+        
+        registerButton.isEnabled = false
+        registerButton.backgroundColor = .rgb(red: 100, green: 100, blue: 100)
     }
     
     @objc private func tappedProfileImageButton() {
@@ -36,6 +44,24 @@ class SignUpViewController: UIViewController {
             self.present(imagePickerController, animated: true, completion: nil)
         }
     }
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        let emailIsEmpty = emailTextField.text?.isEmpty ?? false
+        let passwordIsEmpty = passwordTextField.text?.isEmpty ?? false
+        let usernameIsEmpty = usernameTextField.text?.isEmpty ?? false
+        
+        if emailIsEmpty || passwordIsEmpty || usernameIsEmpty {
+            registerButton.isEnabled = false
+            registerButton.backgroundColor = .rgb(red: 100, green: 100, blue: 100)
+        } else {
+            registerButton.isEnabled = true
+            registerButton.backgroundColor = .rgb(red: 0, green: 185, blue: 0)
+        }
+    }
+    
+}
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
