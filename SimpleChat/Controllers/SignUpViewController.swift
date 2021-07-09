@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
@@ -26,7 +29,7 @@ class SignUpViewController: UIViewController {
         registerButton.layer.cornerRadius = 12
         
         profileImageButton.addTarget(self, action: #selector(tappedProfileImageButton), for: .touchUpInside)
-//        registerButton.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -43,6 +46,24 @@ class SignUpViewController: UIViewController {
             
             self.present(imagePickerController, animated: true, completion: nil)
         }
+    
+    @objc private func tappedRegisterButton() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
+            if let err = err {
+                print("認証情報の保存に失敗しました。\(err)")
+                return
+            }
+            
+            print("認証情報の保存に成功しました。")
+            
+        }
+        
+    }
+    
+    
     }
 
 extension SignUpViewController: UITextFieldDelegate {
