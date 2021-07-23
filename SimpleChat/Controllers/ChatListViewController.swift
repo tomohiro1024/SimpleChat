@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatListViewController: UIViewController {
     
     private let cellId = "cellId"
+    private var users = [User]()
     
     @IBOutlet weak var chatListTableView: UITableView!
     
@@ -24,12 +26,43 @@ class ChatListViewController: UIViewController {
         navigationItem.title = "チャット"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
-        let storyboar = UIStoryboard(name: "SignUp", bundle: nil)
-        let signUpViewController = storyboar.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        self.present(signUpViewController, animated: true, completion: nil)
+        
+        if Auth.auth().currentUser?.uid == nil {
+            let storyboar = UIStoryboard(name: "SignUp", bundle: nil)
+            let signUpViewController = storyboar.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+            signUpViewController.modalPresentationStyle = .fullScreen
+            self.present(signUpViewController, animated: true, completion: nil)
+        }
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchUserInfoFromFirestore()
+    }
+    
+    private func fetchUserInfoFromFirestore() {
+        Firestore.firestore().collection("users").getDocuments { (snapshots, err) in
+            if let err = err {
+                print("user情報の取得に失敗しました。\(err)")
+                return
+            }
+            
+            snapshots?.documents.forEach({ (snapshot) in
+                let dic = snapshot.data()
+                let user = User.init(dic: dic)
+                
+                self.users.append(user)
+                
+                self.users.forEach { (user) in
+                    print("username: ", user.username)
+                    
+                }
+            })
+        }
+    }
+            
 }
 
 extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
