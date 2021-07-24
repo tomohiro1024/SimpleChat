@@ -34,12 +34,23 @@ class ChatListViewController: UIViewController {
             self.present(signUpViewController, animated: true, completion: nil)
         }
         
+        let rigntBarButton = UIBarButtonItem(title: "新規チャット", style: .plain, target: self, action: #selector(tappedNavRightBarButton))
+        navigationItem.rightBarButtonItem = rigntBarButton
+        navigationItem.rightBarButtonItem?.tintColor = .white
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         fetchUserInfoFromFirestore()
+    }
+    
+    @objc private func tappedNavRightBarButton() {
+        let storyboard = UIStoryboard.init(name: "UserList", bundle: nil)
+        let userListViewControlelr = storyboard.instantiateViewController(withIdentifier: "UserListViewController")
+        let nav = UINavigationController(rootViewController: userListViewControlelr)
+        self.present(nav, animated: true, completion: nil)
     }
     
     private func fetchUserInfoFromFirestore() {

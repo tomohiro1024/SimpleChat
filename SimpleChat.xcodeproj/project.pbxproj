@@ -25,6 +25,8 @@
 		CD95D65F26780A8C001C41ED /* ChatInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95D65E26780A8C001C41ED /* ChatInputAccesoryView.swift */; };
 		CD9B5A5E26746B2B00780E83 /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9B5A5D26746B2B00780E83 /* ChatRoom.storyboard */; };
 		CD9B5A6026746C9B00780E83 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */; };
+		CDD722B226ABC93300EE6473 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD722B126ABC93300EE6473 /* UserList.storyboard */; };
+		CDD722B426ABCC0900EE6473 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD722B326ABCC0900EE6473 /* UserListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		CD95D65E26780A8C001C41ED /* ChatInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccesoryView.swift; sourceTree = "<group>"; };
 		CD9B5A5D26746B2B00780E83 /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
 		CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		CDD722B126ABC93300EE6473 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
+		CDD722B326ABCC0900EE6473 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		E4B652571786CEC853654D9F /* Pods-SimpleChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.release.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.release.xcconfig"; sourceTree = "<group>"; };
 		FBB3514735E542F294555CCE /* Pods-SimpleChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChat.debug.xcconfig"; path = "Target Support Files/Pods-SimpleChat/Pods-SimpleChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +119,7 @@
 				CD57146126691309005DD8C5 /* ChatListViewController.swift */,
 				CD9B5A5F26746C9B00780E83 /* ChatRoomViewController.swift */,
 				CD0E3F66269162C70033C4F6 /* SignUpViewController.swift */,
+				CDD722B326ABCC0900EE6473 /* UserListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				CD57145F26691184005DD8C5 /* ChatList.storyboard */,
 				CD9B5A5D26746B2B00780E83 /* ChatRoom.storyboard */,
 				CD0E3F6426915C000033C4F6 /* SignUp.storyboard */,
+				CDD722B126ABC93300EE6473 /* UserList.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD722B226ABC93300EE6473 /* UserList.storyboard in Resources */,
 				CD95D6562675F4CA001C41ED /* ChatRoomTableViewCell.xib in Resources */,
 				CD571458266910D4005DD8C5 /* LaunchScreen.storyboard in Resources */,
 				CD571455266910D4005DD8C5 /* Assets.xcassets in Resources */,
@@ -296,6 +303,7 @@
 				CD0E3F67269162C70033C4F6 /* SignUpViewController.swift in Sources */,
 				CD9B5A6026746C9B00780E83 /* ChatRoomViewController.swift in Sources */,
 				CD57146226691309005DD8C5 /* ChatListViewController.swift in Sources */,
+				CDD722B426ABCC0900EE6473 /* UserListViewController.swift in Sources */,
 				CD0E3F6A26AA7F770033C4F6 /* User.swift in Sources */,
 				CD95D6582675F639001C41ED /* ChatRoomTableViewCell.swift in Sources */,
 				CD95D65F26780A8C001C41ED /* ChatInputAccesoryView.swift in Sources */,
