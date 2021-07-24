@@ -54,7 +54,7 @@ class ChatListViewController: UIViewController {
                 let user = User.init(dic: dic)
                 
                 self.users.append(user)
-                
+                self.chatListTableView.reloadData()
                 self.users.forEach { (user) in
                     print("username: ", user.username)
                     
@@ -72,11 +72,12 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = chatListTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = chatListTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ChatListTableViewCell
+        cell.user = users[indexPath.row]
         return cell
     }
     
@@ -93,12 +94,21 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
 
 class ChatListTableViewCell: UITableViewCell {
     
+    var user: User? {
+        didSet {
+            if let user = user {
+                partnerLabel.text = user.username
+                
+                //            userImageView.image = user?.profileImageUrl
+                dateLabel.text = dateFormatterForDateLabel(date: user.createdAt.dateValue())
+                latestMesseageLabel.text = user.email
+            }
+        }
+    }
+    
     @IBOutlet weak var userImageView: UIImageView!
-    
     @IBOutlet weak var latestMesseageLabel: UILabel!
-    
     @IBOutlet weak var partnerLabel: UILabel!
-    
     @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
@@ -109,6 +119,14 @@ class ChatListTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    private func dateFormatterForDateLabel(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .short
+        formatter.locale = Locale(identifier: "ja_JP")
+        return formatter.string(from: date)
     }
     
 }
