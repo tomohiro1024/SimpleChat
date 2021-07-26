@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import Nuke
 
 class UserListViewController: UIViewController {
     
@@ -62,6 +63,20 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 class UserListTableViewCell: UITableViewCell {
+    
+    var user: User? {
+        didset {
+            usernameLabel.text = user?.username
+            
+            if let url = URL(string: user?.profileImageUrl ?? "") {
+                Nuke.loadImage(with: url, into: userImageView)
+            }
+        }
+    }
+    
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 //        userImageView.layer.cornerRadius = 25

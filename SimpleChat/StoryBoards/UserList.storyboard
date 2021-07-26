@@ -64,6 +64,10 @@
                                                 <constraint firstItem="Hxs-ij-7yT" firstAttribute="centerY" secondItem="kOq-nV-Izx" secondAttribute="centerY" id="cpE-B7-hu8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userImageView" destination="cJN-WG-rez" id="Wkm-FM-tli"/>
+                                            <outlet property="usernameLabel" destination="Hxs-ij-7yT" id="hzB-AX-a4c"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
