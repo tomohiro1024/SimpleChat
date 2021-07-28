@@ -22,7 +22,7 @@ class UserListViewController: UIViewController {
         
         userListTableView.delegate = self
         userListTableView.dataSource = self
-        
+        fetchUserInfoFromFirestore()
     }
     
     private func fetchUserInfoFromFirestore() {
@@ -55,7 +55,8 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = userListTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = userListTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserListTableViewCell
+        cell.user = users[indexPath.row]
         
         return cell
     }
@@ -65,7 +66,7 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
 class UserListTableViewCell: UITableViewCell {
     
     var user: User? {
-        didset {
+        didSet {
             usernameLabel.text = user?.username
             
             if let url = URL(string: user?.profileImageUrl ?? "") {
