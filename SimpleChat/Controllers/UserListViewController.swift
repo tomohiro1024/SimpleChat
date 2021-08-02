@@ -18,6 +18,10 @@ class UserListViewController: UIViewController {
     @IBOutlet weak var userListTableView: UITableView!
     @IBOutlet weak var startChatButton: UIButton!
     
+    @IBAction func closeButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +52,7 @@ class UserListViewController: UIViewController {
                 print("ChatRoom情報の保存に失敗しました。\(err)")
                 return
             }
+            self.dismiss(animated: true, completion: nil)
             print("ChatRoom情報の保存に成功しました。")
         }
         
