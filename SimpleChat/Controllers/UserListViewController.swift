@@ -25,6 +25,7 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userListTableView.tableFooterView = UIView()
         userListTableView.delegate = self
         userListTableView.dataSource = self
         startChatButton.layer.cornerRadius = 15
@@ -127,7 +128,7 @@ class UserListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        userImageView.layer.cornerRadius = 25
+        userImageView.layer.cornerRadius = 32.5
         
     }
     
