@@ -62,6 +62,7 @@ class ChatListViewController: UIViewController {
     private func handleAddedDocumentChange(documentChange: DocumentChange) {
         let dic = documentChange.document.data()
         let chatroom = ChatRoom(dic: dic)
+        chatroom.documentId = documentChange.document.documentID
         
         guard let uid = Auth.auth().currentUser?.uid else { return }
         chatroom.memebers.forEach { (memberUid) in
@@ -154,7 +155,9 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
         let storyboard = UIStoryboard.init(name: "ChatRoom", bundle: nil)
-        let chatRoomViewController = storyboard.instantiateViewController(identifier: "ChatRoomViewController")
+        let chatRoomViewController = storyboard.instantiateViewController(identifier: "ChatRoomViewController")as! ChatRoomViewController
+        chatRoomViewController.user = user
+        chatRoomViewController.chatroom = chatroooms[indexPath.row]
         navigationController?.pushViewController(chatRoomViewController, animated: true)
         
     }

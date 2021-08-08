@@ -13,6 +13,7 @@
 		CD0E3F67269162C70033C4F6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E3F66269162C70033C4F6 /* SignUpViewController.swift */; };
 		CD0E3F6A26AA7F770033C4F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E3F6926AA7F770033C4F6 /* User.swift */; };
 		CD1450CB26BA9EF000329CD6 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1450CA26BA9EF000329CD6 /* ChatRoom.swift */; };
+		CD1450CD26BF8CB100329CD6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1450CC26BF8CB100329CD6 /* Message.swift */; };
 		CD57144C266910D1005DD8C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57144B266910D1005DD8C5 /* AppDelegate.swift */; };
 		CD57144E266910D1005DD8C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57144D266910D1005DD8C5 /* SceneDelegate.swift */; };
 		CD571455266910D4005DD8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD571454266910D4005DD8C5 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		CD0E3F66269162C70033C4F6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CD0E3F6926AA7F770033C4F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CD1450CA26BA9EF000329CD6 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		CD1450CC26BF8CB100329CD6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CD571448266910D1005DD8C5 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD57144B266910D1005DD8C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD57144D266910D1005DD8C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				CD0E3F6926AA7F770033C4F6 /* User.swift */,
 				CD1450CA26BA9EF000329CD6 /* ChatRoom.swift */,
+				CD1450CC26BF8CB100329CD6 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				CD0E3F6A26AA7F770033C4F6 /* User.swift in Sources */,
 				CD95D6582675F639001C41ED /* ChatRoomTableViewCell.swift in Sources */,
 				CD95D65F26780A8C001C41ED /* ChatInputAccesoryView.swift in Sources */,
+				CD1450CD26BF8CB100329CD6 /* Message.swift in Sources */,
 				CD57144E266910D1005DD8C5 /* SceneDelegate.swift in Sources */,
 				CD1450CB26BA9EF000329CD6 /* ChatRoom.swift in Sources */,
 			);
