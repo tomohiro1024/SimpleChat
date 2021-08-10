@@ -12,10 +12,10 @@ class ChatRoomTableViewCell: UITableViewCell {
     var message: Message? {
         didSet {
             if let message = message {
-                messageTextView.text = message.message
+                partnerMessageTextView.text = message.message
                 let width = estimateFrameForTextView(text: message.message).width + 20
                 messageTextViewWidthConstraint.constant = width
-                dateLabel.text = dateFormatterForDateLabel(date: message.createdAt.dateValue())
+                partnerDateLabel.text = dateFormatterForDateLabel(date: message.createdAt.dateValue())
                 
             }
             
@@ -24,10 +24,15 @@ class ChatRoomTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var messageTextView: UITextView!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var partnerMessageTextView: UITextView!
+    @IBOutlet weak var myMessageTextView: UITextView!
+    
+    @IBOutlet weak var partnerDateLabel: UILabel!
+    
+    @IBOutlet weak var myDateLabel: UILabel!
     
     @IBOutlet weak var messageTextViewWidthConstraint: NSLayoutConstraint!
+    
     
     
     override func awakeFromNib() {
@@ -35,7 +40,7 @@ class ChatRoomTableViewCell: UITableViewCell {
         
         backgroundColor = .clear
         userImageView.layer.cornerRadius = 35
-        messageTextView.layer.cornerRadius = 15
+        partnerMessageTextView.layer.cornerRadius = 15
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

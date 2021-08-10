@@ -23,7 +23,7 @@
                             <constraint firstAttribute="width" secondItem="ywt-MU-w8x" secondAttribute="height" multiplier="1:1" id="yp0-7l-c6u"/>
                         </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージがここに入ります" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F79-Yn-py7">
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージがここに入ります" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F79-Yn-py7">
                         <rect key="frame" x="85" y="25" width="250" height="111"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -34,8 +34,24 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKK-R3-dmm">
-                        <rect key="frame" x="340" y="105" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="340" y="109" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OVv-xN-KyR">
+                        <rect key="frame" x="257" y="25" width="240" height="111"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="SYw-qW-qoE"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcA-SS-ywC">
+                        <rect key="frame" x="213" y="114" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -43,17 +59,25 @@
                 <constraints>
                     <constraint firstItem="F79-Yn-py7" firstAttribute="bottom" secondItem="gKK-R3-dmm" secondAttribute="bottom" constant="10" id="3bX-Hc-fC0"/>
                     <constraint firstItem="ywt-MU-w8x" firstAttribute="centerY" secondItem="GdB-Em-1Sm" secondAttribute="centerY" id="Kb2-Sn-MEW"/>
+                    <constraint firstItem="OVv-xN-KyR" firstAttribute="leading" secondItem="zcA-SS-ywC" secondAttribute="trailing" constant="8" id="OYJ-MU-fRh"/>
+                    <constraint firstItem="OVv-xN-KyR" firstAttribute="top" secondItem="GdB-Em-1Sm" secondAttribute="top" constant="25" id="Uxw-Wh-3bo"/>
+                    <constraint firstAttribute="trailing" secondItem="OVv-xN-KyR" secondAttribute="trailing" constant="20" id="Z13-oD-QiZ"/>
                     <constraint firstAttribute="bottom" secondItem="F79-Yn-py7" secondAttribute="bottom" constant="25" id="ZsS-4X-f9c"/>
                     <constraint firstItem="ywt-MU-w8x" firstAttribute="left" secondItem="GdB-Em-1Sm" secondAttribute="left" constant="15" id="h3b-Sd-8UH"/>
+                    <constraint firstAttribute="bottom" secondItem="OVv-xN-KyR" secondAttribute="bottom" constant="25" id="hsP-7M-M5y"/>
                     <constraint firstItem="gKK-R3-dmm" firstAttribute="leading" secondItem="F79-Yn-py7" secondAttribute="trailing" constant="5" id="iTp-js-ciu"/>
                     <constraint firstItem="F79-Yn-py7" firstAttribute="top" secondItem="GdB-Em-1Sm" secondAttribute="top" constant="25" id="oBZ-HY-PNy"/>
+                    <constraint firstAttribute="bottom" secondItem="zcA-SS-ywC" secondAttribute="bottom" constant="30" id="oFZ-ck-YiZ"/>
                     <constraint firstItem="F79-Yn-py7" firstAttribute="leading" secondItem="ywt-MU-w8x" secondAttribute="trailing" constant="10" id="xK0-Pr-Wm8"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="dateLabel" destination="gKK-R3-dmm" id="Ib0-sp-gZ5"/>
-                <outlet property="messageTextView" destination="F79-Yn-py7" id="6nb-sb-S4b"/>
                 <outlet property="messageTextViewWidthConstraint" destination="vbh-MJ-srF" id="iGZ-mO-PNA"/>
+                <outlet property="myDateLabel" destination="zcA-SS-ywC" id="SAY-3n-aJf"/>
+                <outlet property="myMessageTextView" destination="OVv-xN-KyR" id="lyz-Y9-D5Q"/>
+                <outlet property="partnerDateLabel" destination="gKK-R3-dmm" id="Ib0-sp-gZ5"/>
+                <outlet property="partnerMessageTextView" destination="F79-Yn-py7" id="6nb-sb-S4b"/>
                 <outlet property="userImageView" destination="ywt-MU-w8x" id="Wv4-dJ-9kx"/>
             </connections>
             <point key="canvasLocation" x="-348.55072463768118" y="191.85267857142856"/>
@@ -66,6 +90,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
