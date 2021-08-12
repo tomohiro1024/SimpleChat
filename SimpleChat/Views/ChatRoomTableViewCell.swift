@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatRoomTableViewCell: UITableViewCell {
     
@@ -26,11 +27,8 @@ class ChatRoomTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var partnerMessageTextView: UITextView!
     @IBOutlet weak var myMessageTextView: UITextView!
-    
     @IBOutlet weak var partnerDateLabel: UILabel!
-    
     @IBOutlet weak var myDateLabel: UILabel!
-    
     @IBOutlet weak var messageTextViewWidthConstraint: NSLayoutConstraint!
     
     
@@ -45,6 +43,29 @@ class ChatRoomTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    private func checkWhichUserMessage() {
+        // 自分のuidかどうか確認
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        if uid == message?.uid {
+            partnerMessageTextView.isHidden = true
+            partnerDateLabel.isHidden = true
+            userImageView.isHidden = true
+            
+            myMessageTextView.isHidden = false
+            myDateLabel.isHidden = false
+        } else {
+            partnerMessageTextView.isHidden = false
+            partnerDateLabel.isHidden = false
+            userImageView.isHidden = false
+            
+            myMessageTextView.isHidden = true
+            myDateLabel.isHidden = true
+            
+        }
+        
     }
     
     private func estimateFrameForTextView(text: String) -> CGRect{
